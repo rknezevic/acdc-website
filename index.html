@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AC-DC - Elektroinstalacije</title>
+    <link rel="icon" type="image/png" href="img/acdc_logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -34,7 +35,7 @@
                     postrojenja</h1>
                 <img src="/img/acdc_logo.png" alt="AC-DC Logo" class="logo-image">
             </div>
-            <button class="cta-button" onclick="scrollTo('services')">Istraži naše usluge</button>
+            <button class="cta-button" onclick="scrollToSection('services')">Istraži naše usluge</button>
         </div>
         <div class="hero-bg"></div>
     </section>
@@ -223,8 +224,12 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2 class="section-title blue">O nama</h2>
-                    <p>Mi smo AC-DC tvrtka specijalizirana za sve vrste elektroinstalacijskih radova kao i instalacije industrijskih postrojenja. 
-                        Naš tim se sastoji od stručnjaka posvećenih pružanju najbolje vrijednosti našim klijentima.</p>
+                    <p>Mi smo AC-DC, tvrtka specijalizirana za sve vrste elektroinstalacijskih radova te instalacije
+                        industrijskih postrojenja. Naš tim se sastoji od iskusnih i stručnih električara koji su posvećeni pružanju najbolje vrijednosti našim klijentima.
+                        Osim osnovnih elektroinstalacija, bavimo se i montažom opreme, kabliranjem, puštanjem u rad sustava te izvođenjem složenih industrijskih instalacija. 
+                        Zbog prirode posla, naš rad često uključuje terenske projekte diljem Hrvatske, gdje smo prepoznati po kvaliteti i pouzdanosti.
+                        Pružamo i redovito održavanje postrojenja, trgovina i radnih hala, čime osiguravamo nesmetan i siguran rad sustava. 
+                        Naš tim također nudi uslugu izrade elektroinstalacija za obiteljske kuće, od planiranja do završne izvedbe, kako bismo našim klijentima omogućili siguran i moderan dom.</p>
                     <div class="about-features">
                         <div class="feature">
                             <span class="feature-number">15+</span>
@@ -241,7 +246,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&h=400&fit=crop"
+                    <img src="/img/about_us.jpg"
                         alt="O nama" />
                 </div>
             </div>
@@ -297,6 +302,11 @@
                 behavior: 'smooth'
             });
         }
+        function scrollToSection(section) {
+    document.getElementById(section).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
 
         function toggleNav() {
             const navLinks = document.querySelector('.nav-links');

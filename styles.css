@@ -122,8 +122,12 @@ html {
     background-image: url('img/background.jpg');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     overflow: hidden;
+}
+.logo-container img.logo-image {
+    width: 450px; 
+    max-width: 100%;
 }
 
 .home-section::before {
@@ -149,26 +153,6 @@ html {
     align-items: center;    
     gap: 1rem;              
     margin-bottom: 2rem;
-}
-
-.logo-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.logo-text {
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .main-title {
@@ -635,6 +619,24 @@ html {
 }
 
 @media (max-width: 768px) {
+    .home-section {
+        padding: 2rem 1rem; 
+        height: auto; 
+    }
+
+    .main-subtitle {
+        font-size: 1.2rem; 
+        line-height: 1.4;
+    }
+
+    .logo-container img.logo-image {
+        width: 150px; 
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
     .nav-links {
         position: fixed;
         top: 80px;
