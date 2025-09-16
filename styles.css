@@ -169,7 +169,7 @@ html {
 .main-subtitle {
     margin-top: 0.5rem;
     font-size: 1.5rem;
-    color: var(--gray-800);
+    color: white; 
     margin-bottom: 2rem;
 }
 
@@ -625,8 +625,9 @@ html {
     }
 
     .main-subtitle {
-        font-size: 1.2rem; 
+        font-size: 1rem; 
         line-height: 1.4;
+        padding-top: 4rem;
     }
 
     .logo-container img.logo-image {
