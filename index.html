@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC-DC - Elektroinstalacije</title>
-    <link rel="icon" type="image/png" href="img/acdc_logo.png">
+    
+    <title>AC-DC Elektroinstalacije | Industrijska i Kućna Instalacija, Održavanje</title>
+    <meta name="description" content="AC-DC obrt specijaliziran za elektroinstalacije, kabliranje i montažu opreme. Izvodimo radove na hotelima, zgradama, obiteljskim kućama i industrijskim postrojenjima širom Hrvatske.">
+    <meta name="keywords" content="elektroinstalacije, kabliranje, AC-DC, Babina Greda, industrijske instalacije, pametna kuća, održavanje, električar">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="AC-DC Elektroinstalacije | Industrijska i Kućna Instalacija">
+    <meta property="og:description" content="Specijalizirani smo za elektroinstalacije, kabliranje i održavanje postrojenja diljem Hrvatske.">
+    <meta property="og:image" content="https://ac-dc-elektroinstalacije.hr/img/acdc_logo.png">
+    <meta property="og:url" content="https://ac-dc-elektroinstalacije.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="/img/acdc_logo.png">
+
+    <link rel="canonical" href="https://www.ac-dc-elektroinstalacije.hr/">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Glavna navigacija">
         <div class="nav-brand">
-            <img src="/img/acdc_logo.png" alt="acdc_logo">
+            <a href="/" aria-label="Početna stranica">
+                <img src="/img/acdc_logo.png" alt="AC-DC logo" width="80" height="80">
+            </a>
         </div>
         <div class="nav-links">
-            <a href="#home" onclick="scrollTo('home')">Početna</a>
-            <a href="#services" onclick="scrollTo('services')">Usluge</a>
-            <a href="#projects" onclick="scrollTo('projects')">Projekti</a>
-            <a href="#about" onclick="scrollTo('about')">O nama</a>
-            <a href="#contact" onclick="scrollTo('contact')">Kontakt</a>
+            <a href="#home">Početna</a>
+            <a href="#services">Usluge</a>
+            <a href="#projects">Projekti</a>
+            <a href="#about">O nama</a>
+            <a href="#contact">Kontakt</a>
         </div>
-        <div class="nav-toggle" onclick="toggleNav()">
+        <div class="nav-toggle" onclick="toggleNav()" aria-label="Otvori navigaciju">
             <span></span>
             <span></span>
             <span></span>
@@ -31,11 +47,14 @@
     <section id="home" class="home-section">
         <div class="home-content">
             <div class="logo-container">
-                <h1 class="main-subtitle">Obrt za sve vrste elektroinstalacijskih radova kao i instalacije industrijskih
-                    postrojenja</h1>
-                <img src="/img/acdc_logo.png" alt="AC-DC Logo" class="logo-image">
+                <h1 class="main-subtitle">
+                    Stručnjaci za elektroinstalacije, kabliranje i montažu u Hrvatskoj
+                </h1>
+                <img src="/img/acdc_logo.png" alt="AC-DC Elektroinstalacije Logo" class="logo-image" loading="lazy">
             </div>
-            <button class="cta-button" onclick="scrollToSection('services')">Istraži naše usluge</button>
+            <button class="cta-button" onclick="scrollToSection('services')">
+                Istraži naše usluge
+            </button>
         </div>
         <div class="hero-bg"></div>
     </section>
