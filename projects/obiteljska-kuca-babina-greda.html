@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obiteljska kuća - Babina Greda - AC-DC</title>
+    <link rel="icon" type="image/png" href="../img/acdc_logo.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="/img/acdc_logo.png" alt="acdc_logo">
+        </div>
+        <div class="nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Usluge</a>
+            <a href="../index.html#projects">Projekti</a>
+            <a href="../index.html#about">O nama</a>
+            <a href="../index.html#contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="project-page">
+        <div class="container">
+            <div class="project-header">
+                <a href="../index.html#projects" class="back-button">← Povratak na projekte</a>
+                <h1 class="project-title">Obiteljska kuća - Babina Greda</h1>
+            </div>
+
+            <div class="project-content">
+                <div class="project-images">
+                    <img src="../img/Obiteljska_kuca_bg/IMG-20250915-WA0101.jpg" alt="Obiteljska kuća" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Obiteljska_kuca_bg/IMG-20250915-WA0102.jpg" alt="Obiteljska kuća" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Obiteljska_kuca_bg/IMG-20250915-WA0103.jpg" alt="Obiteljska kuća" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Obiteljska_kuca_bg/IMG-20250915-WA0104.jpg" alt="Obiteljska kuća" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Obiteljska_kuca_bg/IMG-20250915-WA0105.jpg" alt="Elektroinstalacije" class="project-image" onclick="openModal(this.src)">
+                </div>
+
+                <div class="project-info">
+                    <h3>O projektu</h3>
+                    <p>
+                        Kompletna elektroinstalacija moderne obiteljske kuće u Babinoj Gredi izvedena je s naglaskom na energetsku učinkovitost i suvremene tehnološke standarde. Projekt je realiziran u suradnji s obitelji koja je željela moderan i siguran dom.
+                    </p>
+                    
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Lokacija:</span>
+                            <span class="detail-value">Babina Greda</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tip objekta:</span>
+                            <span class="detail-value">Obiteljska kuća</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Površina:</span>
+                            <span class="detail-value">180 m²</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Trajanje:</span>
+                            <span class="detail-value">8 tjedana</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value">Završeno</span>
+                        </div>
+                    </div>
+
+                    <h3>Opseg radova</h3>
+                    <p>
+                        Izvedena je potpuna elektroinstalacija s modernim pristupom stambenim potrebama:
+                    </p>
+                    <ul style="color: var(--gray-800); line-height: 1.7; margin-left: 1.5rem;">
+                        <li>Glavni električni ormar s diferencijalnom zaštitom</li>
+                        <li>Instalacija utičnica i prekidača u svim prostorijama</li>
+                        <li>LED rasvjeta s dimabilnim sustavima</li>
+                        <li>Vanjska rasvjeta i sigurnosne instalacije</li>
+                        <li>Priprema za pametne sustave i automatizaciju</li>
+                        <li>Instalacija za toplinsku pumpu i klimatizaciju</li>
+                        <li>Internetska i TV infrastruktura</li>
+                        <li>Uzemljenje i gromobransku zaštitu</li>
+                    </ul>
+
+                    <h3>Tehnička rješenja</h3>
+                    <p>
+                        Korišten je moderan pristup s energy-efficient komponentama, pripremom za buduće proširenje solarnim panelima, te inteligentnim rješenjima koja omogućavaju lakše upravljanje potrošnjom energije. Sve instalacije su izvedene prema najnovijim HRN EN standardima.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektroinstalacije na Sinsay trgovini - AC-DC</title>
+    <link rel="icon" type="image/png" href="../img/acdc_logo.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="/img/acdc_logo.png" alt="acdc_logo">
+        </div>
+        <div class="nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Usluge</a>
+            <a href="../index.html#projects">Projekti</a>
+            <a href="../index.html#about">O nama</a>
+            <a href="../index.html#contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="project-page">
+        <div class="container">
+            <div class="project-header">
+                <a href="../index.html#projects" class="back-button">← Povratak na projekte</a>
+                <h1 class="project-title">Elektroinstalacije na Sinsay trgovini</h1>
+            </div>
+
+            <div class="project-content">
+                <div class="project-images">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0083.jpg" alt="Rasvjeta 1" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0084.jpg" alt="Rasvjeta 2" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0085.jpg" alt="Sinsay trgovina" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0086.jpg" alt="Sinsay trgovina" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0087.jpg" alt="Rasvjeta 3" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0088.jpg" alt="Rasvjeta 4" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0089.jpg" alt="Rasvjeta 5" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Sinsay Virovitica/IMG-20250915-WA0090.jpg" alt="Rasvjeta 6" class="project-image" onclick="openModal(this.src)">
+
+                </div>
+
+                <div class="project-info">
+                    <h3>O projektu</h3>
+                    <p>
+                        Kompletna elektroinstalacija za Sinsay trgovinu u Virovitici uključivala je složenu koordinaciju
+                        s brandskim standardima i zahtjevima modernog prodajnog prostora. Projekt je realiziran u kratkom
+                        vremenskom roku s minimalnim prekidima u poslovanju.
+                    </p>
+
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Lokacija:</span>
+                            <span class="detail-value">Virovitica</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tip objekta:</span>
+                            <span class="detail-value">Trgovina (Sinsay)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Površina:</span>
+                            <span class="detail-value">450 m²</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Trajanje:</span>
+                            <span class="detail-value">6 tjedana</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value">Završeno</span>
+                        </div>
+                    </div>
+
+                    <h3>Opseg radova</h3>
+                    <p>
+                        Izvedena je potpuna elektroinstalacija prema standardima LPP grupe i Sinsay normama:
+                    </p>
+                    <ul style="color: var(--gray-800); line-height: 1.7; margin-left: 1.5rem;">
+                        <li>Instalacija glavnih distribucijskih ormara i razvodnih kutija</li>
+                        <li>Kompleksna mreža rasvjete s LED tračnim sustavima</li>
+                        <li>Instalacija sigurnosne rasvjete i izlaznih znakova</li>
+                        <li>Napajanje za POS sustave i kase</li>
+                        <li>Instalacija utičnica za displeje i reklamne panele</li>
+                        <li>Kabliranje za sigurnosne kamere i alarm sustave</li>
+                        <li>Napajanje za klimatizaciju i ventilaciju</li>
+                    </ul>
+
+                    <h3>Posebnosti projekta</h3>
+                    <p>
+                        Rad je izveden u skladu s prodajnim standardima koji zahtijevaju precizno pozicioniranje rasvjete
+                        za optimalno prezentiranje robe. Implementiran je napredni sustav upravljanja rasvjetom koji
+                        omogućava različite scenarije ovisno o vremenu dana i sezonskim potrebama.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        window.onclick = function (event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+
+</html>

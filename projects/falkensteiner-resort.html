@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falkensteiner Resort - Elektroinstalacije - AC-DC</title>
+    <link rel="icon" type="image/png" href="../img/acdc_logo.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="/img/acdc_logo.png" alt="acdc_logo">
+        </div>
+        <div class="nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Usluge</a>
+            <a href="../index.html#projects">Projekti</a>
+            <a href="../index.html#about">O nama</a>
+            <a href="../index.html#contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="project-page">
+        <div class="container">
+            <div class="project-header">
+                <a href="../index.html#projects" class="back-button">← Povratak na projekte</a>
+                <h1 class="project-title">Falkensteiner Resort - Električne instalacije</h1>
+            </div>
+
+            <div class="project-content">
+                <div class="project-images">
+                    <img src="../img/Falkensteiner Resort/IMG-20250915-WA0095.jpg" alt="Falkensteiner Resort" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Falkensteiner Resort/IMG-20250915-WA0096.jpg" alt="Falkensteiner Resort" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Falkensteiner Resort/IMG-20250915-WA0097.jpg" alt="Falkensteiner Resort" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Falkensteiner Resort/IMG-20250915-WA0098.jpg" alt="Resort instalacije" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Falkensteiner Resort/IMG-20250915-WA0099.jpg" alt="Električne instalacije" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/Falkensteiner Resort/IMG-20250915-WA0100.jpg" alt="Resort sustavi" class="project-image" onclick="openModal(this.src)">
+                </div>
+
+                <div class="project-info">
+                    <h3>O projektu</h3>
+                    <p>
+                        Falkensteiner Resort projekt je predstavljao sveobuhvatnu realizaciju elektroinstalacija za luksuzni turistički kompleks. Rad je uključivao složene sustave za hotelske sadržaje, wellness centre, restorane i rekreacijske objekte s najvišim standardima kvalitete.
+                    </p>
+                    
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Lokacija:</span>
+                            <span class="detail-value">Hrvatska</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tip objekta:</span>
+                            <span class="detail-value">Resort kompleks</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Površina:</span>
+                            <span class="detail-value">12,000 m²</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Trajanje:</span>
+                            <span class="detail-value">3 mjeseca</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value">U tijeku</span>
+                        </div>
+                    </div>
+
+                    <h3>Opseg radova</h3>
+                    <p>
+                        Realiziran je kompletan električni sustav za premium resort s međunarodnim standardima:
+                    </p>
+                    <ul style="color: var(--gray-800); line-height: 1.7; margin-left: 1.5rem;">
+                        <li>Glavne trafostanice i energetska infrastruktura</li>
+                        <li>Elektroinstalacije za 200+ hotelskih jedinica</li>
+                        <li>Specijalizirane instalacije za spa i wellness</li>
+                        <li>Složene sustave za bazene i vodene atrakcije</li>
+                        <li>Restorane, barove i konferencijske prostore</li>
+                        <li>Vanjsku arhitektonsku i ambijentnu rasvjetu</li>
+                        <li>Sigurnosne i nadzorne sustave</li>
+                        <li>Sustave upravljanja zgradom (BMS)</li>
+                    </ul>
+
+                    <h3>Tehnička sofisticiranost</h3>
+                    <p>
+                        Projekt je zahtijevao integraciju različitih sustava u jednu cjelinu s centralnim upravljanjem. 
+                        Implementirani su energetski učinkoviti sustavi s mogućnostima optimizacije potrošnje, napredni wellness sustavi za spa centre, te kompletna automatizacija 
+                        hotelskih funkcija prema standardima Falkensteiner grupe.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

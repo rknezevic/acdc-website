@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMW - Tvrtka za preradu metala - AC-DC</title>
+    <link rel="icon" type="image/png" href="../img/acdc_logo.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="/img/acdc_logo.png" alt="acdc_logo">
+        </div>
+        <div class="nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Usluge</a>
+            <a href="../index.html#projects">Projekti</a>
+            <a href="../index.html#about">O nama</a>
+            <a href="../index.html#contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="project-page">
+        <div class="container">
+            <div class="project-header">
+                <a href="../index.html#projects" class="back-button">← Povratak na projekte</a>
+                <h1 class="project-title">SMW - Tvrtka za preradu metala</h1>
+            </div>
+
+            <div class="project-content">
+                <div class="project-images">  
+                    <img src="../img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1652.jpg" alt="Utičnice" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1653.jpg" alt="Kutija s osiguračima" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1656.jpg" alt="Spajanje stroja" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1695.jpg" alt="Rasvjeta" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1703.jpg" alt="Industrijske instalacije" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1760.jpg" alt="Električne instalacije" class="project-image" onclick="openModal(this.src)">
+                    <img src="../img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1992.jpg" alt="Tvorničke instalacije" class="project-image" onclick="openModal(this.src)">
+                </div>
+
+                <div class="project-info">
+                    <h3>O projektu</h3>
+                    <p>
+                        Elektroinstalacije za SMW tvrtku za preradu metala u Slavonskom Brodu predstavljale su kompleksan industrijski projekt s visokim zahtjevima za pouzdanošću i sigurnošću. Instalacije su dizajnirane za rad u industrijskom okruženju s teškim uvjetima rada.
+                    </p>
+                    
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Lokacija:</span>
+                            <span class="detail-value">Slavonski Brod</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tip objekta:</span>
+                            <span class="detail-value">Industrijska tvornica</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Površina:</span>
+                            <span class="detail-value">3,200 m²</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Trajanje:</span>
+                            <span class="detail-value">5 mjeseci</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value">Završeno</span>
+                        </div>
+                    </div>
+
+                    <h3>Opseg radova</h3>
+                    <p>
+                        Izvedene su kompletne industrijske elektroinstalacije prilagođene zahtjevima preradbe metala:
+                    </p>
+                    <ul style="color: var(--gray-800); line-height: 1.7; margin-left: 1.5rem;">
+                        <li>Glavne trafostanice za industrijske potrebe</li>
+                        <li>Napajanje za teške industrijske strojeve</li>
+                        <li>Specijalizirane instalacije za metalnu obradu</li>
+                        <li>Sigurnosne sustave za industrijski rad</li>
+                        <li>Industrijska rasvjeta s LED tehnologijom</li>
+                        <li>Sustave za ventilaciju i odsis</li>
+                        <li>Napajanja za dizalice i transportne sustave</li>
+                        <li>Uzemljenja i gromobransku zaštitu</li>
+                    </ul>
+
+                    <h3>Industrijski standardi</h3>
+                    <p>
+                        Sve instalacije su izvedene prema industrijskim standardima za metalnu industriju, uključujući posebne zahtjeve za sigurnost rada s metalnim materijalima, protupožarnu zaštitu i elektromagnetsku kompatibilnost. Korištena su robusna rješenja otporna na prašinu, vlagu i mehaničke utjecaje.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

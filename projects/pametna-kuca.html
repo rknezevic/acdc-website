@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektroinstalacije i kabliranje na pametnoj kući - AC-DC</title>
+    <link rel="icon" type="image/png" href="../img/acdc_logo.png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="/img/acdc_logo.png" alt="acdc_logo">
+        </div>
+        <div class="nav-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#services">Usluge</a>
+            <a href="../index.html#projects">Projekti</a>
+            <a href="../index.html#about">O nama</a>
+            <a href="../index.html#contact">Kontakt</a>
+        </div>
+    </nav>
+
+    <div class="project-page">
+        <div class="container">
+            <div class="project-header">
+                <a href="../index.html#projects" class="back-button">← Povratak na projekte</a>
+                <h1 class="project-title">Elektroinstalacije i kabliranje na pametnoj kući</h1>
+            </div>
+
+            <div class="project-content">
+                <div class="project-images">
+                    <img src="../img/Pametna kuca u Austriji/IMG-20250915-WA0021.jpg" 
+                         alt="Pametna kuća - slika 1" 
+                         class="project-image" 
+                         onclick="openModal(this.src)">
+                    <img src="../img/Pametna kuca u Austriji/IMG-20250915-WA0022.jpg" 
+                         alt="Pametna kuća - slika 2" 
+                         class="project-image" 
+                         onclick="openModal(this.src)">
+                    <img src="../img/Pametna kuca u Austriji/IMG-20250915-WA0023.jpg" 
+                         alt="Pametna kuća - slika 3" 
+                         class="project-image" 
+                         onclick="openModal(this.src)">
+                    <img src="../img/Pametna kuca u Austriji/IMG-20250915-WA0024.jpg" 
+                         alt="Pametna kuća - slika 4" 
+                         class="project-image" 
+                         onclick="openModal(this.src)">
+                    <img src="../img/Pametna kuca u Austriji/IMG-20250915-WA0025.jpg" 
+                         alt="Pametna kuća - slika 5" 
+                         class="project-image" 
+                         onclick="openModal(this.src)">
+                    <img src="../img/Pametna kuca u Austriji/IMG-20250915-WA0020.jpg" 
+                         alt="Pametna kuća - slika 6" 
+                         class="project-image" 
+                         onclick="openModal(this.src)">
+                </div>
+
+                <!-- Right side - Project Info -->
+                <div class="project-info">
+                    <h3>O projektu</h3>
+                    <p>
+                        Realizacija kompletnih elektroinstalacija na modernoj pametnoj kući u Austriji predstavlja jedan od nasih
+                         najzahtjevnijih i najnaprednijih projekata. Projekt je uključivao implementaciju najnovijih tehnologija za automatizaciju doma.
+                    </p>
+                    
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Lokacija:</span>
+                            <span class="detail-value">Austrija</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Tip objekta:</span>
+                            <span class="detail-value">Pametna kuća</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Površina:</span>
+                            <span class="detail-value">250 m²</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Trajanje:</span>
+                            <span class="detail-value">1 mjesec</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Status:</span>
+                            <span class="detail-value">Završeno</span>
+                        </div>
+                    </div>
+
+                    <h3>Opseg radova</h3>
+                    <p>
+                        Naš tim stručnjaka je izvršio kompletnu instalaciju elektroenergetske mreže, uključujući:
+                    </p>
+                    <ul style="color: var(--gray-800); line-height: 1.7; margin-left: 1.5rem;">
+                        <li>Projektiranje i instalacija glavnih distribucijskih ormara</li>
+                        <li>Polaganje kablova za napajanje</li>
+                        <li>Instalacija pametnih prekidača i utičnica</li>
+                        <li>Integracija sistema za automatizaciju rasvjete</li>
+                        <li>Kabliranje za sigurnosne sustave</li>
+                        <li>Testiranje i puštanje u rad cijelog sustava</li>
+                    </ul>
+
+                    <h3>Korištene tehnologije</h3>
+                    <p>
+                        Za realizaciju ovog projekta korištene su najnaprednije tehnologije 
+                        uključujući KNX/EIB bus sistem za automatizaciju, LED rasvjetu s mogućnošću regulacije, 
+                        te napredne sigurnosne sustave integrirane u jedinstven korisnički interfejs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
