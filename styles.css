@@ -747,6 +747,16 @@ html {
     .container {
         padding: 0 15px;
     }
+    .service-card {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* nasljeđuje boju teksta */
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
 }
 
 @media (max-width: 480px) {
