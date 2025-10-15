@@ -251,19 +251,33 @@ html {
 }
 
 .service-card {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: block;
+    text-decoration: none;
+    color: inherit; /* nasljeđuje boju teksta */
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+
+}
+/* Početno stanje kartica */
+.service-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Kada se kartica "aktivira" */
+.service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .service-icon {
@@ -914,10 +928,11 @@ html {
             }
 
             .project-images {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             }
 
             .project-image {
-                height: 150px;
+                height: 100px; 
+                width: 100%;
             }
         }

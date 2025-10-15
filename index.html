@@ -89,35 +89,35 @@
         <div class="container">
             <h2 class="section-title red">Usluge</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <a href="#projects" class="service-card">
                     <div class="service-icon">🏢</div>
                     <h3>Hoteli i zgrade</h3>
                     <p>Odrađivanje kompletne tičino instalacije na hotelima i zgradama</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="#projects" class="service-card">
                     <div class="service-icon">💡🔧</div>
                     <h3>Električna rasvjeta</h3>
                     <p>Održavanje i popravak električne rasvjete</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="#projects" class="service-card">
                     <div class="service-icon">🏠</div>
                     <h3>Obiteljske kuće</h3>
                     <p>Izrada elektroinstalacija na obiteljskim kućama</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="#projects" class="service-card">
                     <div class="service-icon">🔨</div>
                     <h3>Veliki pogoni</h3>
                     <p>Kabliranje, spajanje i puštanje u rad velikih pogona za razne djelatnosti</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="#projects" class="service-card">
                     <div class="service-icon">🛠️</div>
                     <h3>Održavanje</h3>
                     <p>Vršimo održavanje radnih hala, trgovina, postrojenja i svega što ima veze sa strujom</p>
-                </div>
-
+                </a>
             </div>
         </div>
     </section>
+
 
     <section id="projects" class="projects-section">
         <div class="container">
@@ -405,6 +405,20 @@
         }
 
         form.addEventListener("submit", handleFormSubmit);
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".service-card");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target); // animacija se radi samo jednom
+                    }
+                });
+            }, { threshold: 0.3 }); // kartica postaje vidljiva kada je 20% vidljivo
+
+            cards.forEach(card => observer.observe(card));
+        });
     </script>
 </body>
 
