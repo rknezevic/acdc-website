@@ -309,22 +309,6 @@
             });
         });
 
-
-        function toggleLike(button) {
-            const counter = button.querySelector('.love-counter');
-            let count = parseInt(counter.textContent);
-
-            if (button.classList.contains('liked')) {
-                button.classList.remove('liked');
-                count--;
-            } else {
-                button.classList.add('liked');
-                count++;
-            }
-
-            counter.textContent = count;
-        }
-
         window.addEventListener('load', function () {
             const items = document.querySelectorAll('.gallery-item');
             items.forEach((item, index) => {
