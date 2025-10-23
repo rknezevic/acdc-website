@@ -295,8 +295,20 @@
 
         function toggleNav() {
             const navLinks = document.querySelector('.nav-links');
+            const toggle = document.querySelector('.nav-toggle');
             navLinks.classList.toggle('active');
+            toggle.classList.toggle('active'); // animira hamburger
         }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                const toggle = document.querySelector('.nav-toggle');
+
+                navLinks.classList.remove('active');
+                toggle.classList.remove('active');
+            });
+        });
+
 
         function toggleLike(button) {
             const counter = button.querySelector('.love-counter');
