@@ -16,7 +16,8 @@
     <meta property="og:description"
         content="Specijalizirani smo za elektroinstalacije, kabliranje i održavanje postrojenja diljem Hrvatske.">
     <meta property="og:image" content="https://ac-dc-elektroinstalacije.hr/img/acdc_logo.png">
-    <meta property="og:url" content="https://ac-dc-elektroinstalacije.com">
+    <meta property="og:url" content="https://www.ac-dc-elektroinstalacije.hr">
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" href="/img/acdc_logo.png" type="image/png">
@@ -27,6 +28,7 @@
     <link rel="preload" as="image" href="/img/background.jpg" fetchpriority="high">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="/main.js" defer></script>
 
     <script type="application/ld+json">
 {
@@ -55,18 +57,18 @@
                 <img src="/img/acdc_logo.png" alt="AC-DC logo" width="80" height="80">
             </a>
         </div>
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
             <a href="#home">Početna</a>
             <a href="#services">Usluge</a>
             <a href="#projects">Projekti</a>
             <a href="#about">O nama</a>
             <a href="#contact">Kontakt</a>
         </div>
-        <div class="nav-toggle" onclick="toggleNav()" aria-label="Otvori navigaciju">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Otvori navigaciju" type="button">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </nav>
 
     <section id="home" class="home-section">
@@ -77,7 +79,7 @@
                 </h1>
                 <img src="/img/acdc_logo.png" alt="AC-DC Elektroinstalacije Logo" class="logo-image" loading="lazy">
             </div>
-            <button class="cta-button" onclick="scrollToSection('services')">
+            <button class="cta-button">
                 Istraži naše usluge
             </button>
         </div>
@@ -123,68 +125,80 @@
         <div class="container">
             <h2 class="section-title blue">Projekti</h2>
             <div class="gallery-grid" id="gallery">
-                <div class="gallery-item short" onclick="openProject('pametna-kuca-austrija')">
-                    <img src="/img/Pametna kuca u Austriji/IMG-20250915-WA0021.jpg"
-                        alt="Elektroinstalacije i kabliranje na pametnoj kući" class="gallery-image">
+                <div class="gallery-item short" data-project="pametna-kuca-austrija">
+                    <picture>
+                        <source srcset="/img/Pametna kuca u Austriji/IMG-20250915-WA0021.webp" type="image/webp">
+                        <img src="/img/Pametna kuca u Austriji/IMG-20250915-WA0021.jpg"
+                            alt="Elektroinstalacije i kabliranje na pametnoj kući" class="gallery-image" loading="lazy">
+                    </picture>
                     <div class="item-overlay">
                         <div class="item-title">Elektroinstalacije i kabliranje na pametnoj kući</div>
-                        <button class="view-details-btn"
-                            onclick="event.stopPropagation(); openProject('pametna-kuca-austrija')">Pogledaj
+                        <button class="view-details-btn" data-project="pametna-kuca-austrija">Pogledaj
                             detaljno</button>
                     </div>
                 </div>
 
-                <div class="gallery-item medium" onclick="openProject('sinsay-virovitica')">
-                    <img src="/img/Sinsay Virovitica/IMG-20250915-WA0093.jpg"
-                        alt="Izrada elektroinstalacija na Sinsay trgovini" class="gallery-image">
+                <div class="gallery-item medium" data-project="sinsay-virovitica">
+                    <picture>
+                        <source srcset="/img/Sinsay Virovitica/IMG-20250915-WA0093.webp" type="image/webp">
+                        <img src="/img/Sinsay Virovitica/IMG-20250915-WA0093.jpg"
+                            alt="Izrada elektroinstalacija na Sinsay trgovini" class="gallery-image" loading="lazy">
+                    </picture>
                     <div class="item-overlay">
                         <div class="item-title">Izrada elektroinstalacija na Sinsay trgovini</div>
-                        <button class="view-details-btn"
-                            onclick="event.stopPropagation(); openProject('sinsay-virovitica')">Pogledaj
+                        <button class="view-details-btn" data-project="sinsay-virovitica">Pogledaj
                             detaljno</button>
                     </div>
                 </div>
 
-                <div class="gallery-item medium" onclick="openProject('hotel-hilton-ugljan')">
-                    <img src="/img/Hotel Hilton, otok Ugljan/IMG-20250915-WA0072.jpg"
-                        alt="Kompletna tičino instalacija, kabliranje i spajanje cijelog hotela" class="gallery-image">
+                <div class="gallery-item medium" data-project="hotel-hilton-ugljan">
+                    <picture>
+                        <source srcset="/img/Hotel Hilton, otok Ugljan/IMG-20250915-WA0072.webp" type="image/webp">
+                        <img src="/img/Hotel Hilton, otok Ugljan/IMG-20250915-WA0072.jpg"
+                            alt="Kompletna tičino instalacija, kabliranje i spajanje cijelog hotela" class="gallery-image" loading="lazy">
+                    </picture>
                     <div class="item-overlay">
                         <div class="item-title">Kompletna tičino instalacija, kabliranje i spajanje hotela Hilton</div>
-                        <button class="view-details-btn"
-                            onclick="event.stopPropagation(); openProject('hotel-hilton-ugljan')">Pogledaj
+                        <button class="view-details-btn" data-project="hotel-hilton-ugljan">Pogledaj
                             detaljno</button>
                     </div>
                 </div>
 
-                <div class="gallery-item short" onclick="openProject('obiteljska-kuca-babina-greda')">
-                    <img src="/img/Obiteljska_kuca_bg/IMG-20250915-WA0104.jpg"
-                        alt="Izrada elektroinstalacija na obiteljskoj kući u Babinoj Gredi " class="gallery-image">
+                <div class="gallery-item short" data-project="obiteljska-kuca-babina-greda">
+                    <picture>
+                        <source srcset="/img/Obiteljska_kuca_bg/IMG-20250915-WA0104.webp" type="image/webp">
+                        <img src="/img/Obiteljska_kuca_bg/IMG-20250915-WA0104.jpg"
+                            alt="Izrada elektroinstalacija na obiteljskoj kući u Babinoj Gredi " class="gallery-image" loading="lazy">
+                    </picture>
                     <div class="item-overlay">
                         <div class="item-title">Izrada elektroinstalacija na obiteljskoj kući u Babinoj Gredi</div>
-                        <button class="view-details-btn"
-                            onclick="event.stopPropagation(); openProject('obiteljska-kuca-babina-greda')">Pogledaj
+                        <button class="view-details-btn" data-project="obiteljska-kuca-babina-greda">Pogledaj
                             detaljno</button>
                     </div>
                 </div>
 
-                <div class="gallery-item tall" onclick="openProject('falkensteiner-resort')">
-                    <img src="/img/Falkensteiner Resort/IMG-20250915-WA0097.jpg" alt="Falkensteiner resort"
-                        class="gallery-image">
+                <div class="gallery-item tall" data-project="falkensteiner-resort">
+                    <picture>
+                        <source srcset="/img/Falkensteiner Resort/IMG-20250915-WA0097.webp" type="image/webp">
+                        <img src="/img/Falkensteiner Resort/IMG-20250915-WA0097.jpg" alt="Falkensteiner resort"
+                            class="gallery-image" loading="lazy">
+                    </picture>
                     <div class="item-overlay">
                         <div class="item-title">Falkensteiner resort</div>
-                        <button class="view-details-btn"
-                            onclick="event.stopPropagation(); openProject('falkensteiner-resort')">Pogledaj
+                        <button class="view-details-btn" data-project="falkensteiner-resort">Pogledaj
                             detaljno</button>
                     </div>
                 </div>
 
-                <div class="gallery-item medium" onclick="openProject('smw-slavonski-brod')">
-                    <img src="/img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1695.jpg"
-                        alt="Izrada elektroinstalacija za SMW tvrtku za preradu metala" class="gallery-image">
+                <div class="gallery-item medium" data-project="smw-slavonski-brod">
+                    <picture>
+                        <source srcset="/img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1695.webp" type="image/webp">
+                        <img src="/img/SMW tvrtka za preradu metala Slavonski Brod/IMG_1695.jpg"
+                            alt="Izrada elektroinstalacija za SMW tvrtku za preradu metala" class="gallery-image" loading="lazy">
+                    </picture>
                     <div class="item-overlay">
                         <div class="item-title">Izrada elektroinstalacija za SMW tvrtku za preradu metala</div>
-                        <button class="view-details-btn"
-                            onclick="event.stopPropagation(); openProject('smw-slavonski-brod')">Pogledaj
+                        <button class="view-details-btn" data-project="smw-slavonski-brod">Pogledaj
                             detaljno</button>
                     </div>
                 </div>
@@ -224,7 +238,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="/img/about_us.jpg" alt="O nama" />
+                    <img src="/img/about_us.jpg" alt="O nama" loading="lazy" />
                 </div>
             </div>
         </div>
@@ -267,11 +281,26 @@
                     <h3> Ako želite sklopiti posao s nama ili ste zainteresirani za rad kod nas, slobodno pošaljite
                         upit!</h3>
                     <form action="https://formspree.io/f/mgvlbpvr" method="POST" class="contact-form">
-                        <input type="text" name="Ime" placeholder="Ime" required>
-                        <input type="text" name="Prezime" placeholder="Prezime" required>
-                        <input type="email" name="Email" placeholder="Email" required>
-                        <input type="text" name="Predmet" placeholder="Predmet" required>
-                        <textarea name="Poruka" rows="4" placeholder="Poruka" required></textarea>
+                        <div class="form-group">
+                            <label for="contact-ime">Ime</label>
+                            <input type="text" id="contact-ime" name="Ime" placeholder="Ime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-prezime">Prezime</label>
+                            <input type="text" id="contact-prezime" name="Prezime" placeholder="Prezime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="Email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-predmet">Predmet</label>
+                            <input type="text" id="contact-predmet" name="Predmet" placeholder="Predmet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-poruka">Poruka</label>
+                            <textarea id="contact-poruka" name="Poruka" rows="4" placeholder="Poruka" required></textarea>
+                        </div>
                         <button type="submit" class="submit-btn">Pošalji</button>
                     </form>
                 </div>
@@ -281,141 +310,38 @@
         </div>
     </section>
 
-    <script>
-        function scrollTo(section) {
-            document.getElementById(section).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-        function scrollToSection(section) {
-            document.getElementById(section).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-nav">
+                    <h4>Navigacija</h4>
+                    <ul>
+                        <li><a href="/#home">Početna</a></li>
+                        <li><a href="/#services">Usluge</a></li>
+                        <li><a href="/#projects">Projekti</a></li>
+                        <li><a href="/#about">O nama</a></li>
+                        <li><a href="/#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontakt</h4>
+                    <p>Braće Radića 50, Babina Greda</p>
+                    <p>+385 95 851 8709</p>
+                    <p>ac.dc.babic@gmail.com</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Pratite nas</h4>
+                    <a href="https://www.facebook.com/ac.dc.obrt.za.elektroinstalacije" target="_blank" rel="noopener noreferrer" aria-label="Facebook stranica AC-DC">
+                        <img src="/img/facebook.png" alt="Facebook" class="social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> AC-DC d.o.o. Sva prava pridržana.</p>
+            </div>
+        </div>
+    </footer>
 
-        function toggleNav() {
-            const navLinks = document.querySelector('.nav-links');
-            const toggle = document.querySelector('.nav-toggle');
-            navLinks.classList.toggle('active');
-            toggle.classList.toggle('active'); // animira hamburger
-        }
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.querySelector('.nav-links');
-                const toggle = document.querySelector('.nav-toggle');
-
-                navLinks.classList.remove('active');
-                toggle.classList.remove('active');
-            });
-        });
-
-        window.addEventListener('load', function () {
-            const items = document.querySelectorAll('.gallery-item');
-            items.forEach((item, index) => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(30px)';
-
-                setTimeout(() => {
-                    item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-        });
-        function openProject(projectId) {
-            const projectUrls = {
-                'pametna-kuca-austrija': '/projects/pametna-kuca.html',
-                'sinsay-virovitica': 'projects/sinsay-virovitica.html',
-                'hotel-hilton-ugljan': 'projects/hotel-hilton-ugljan.html',
-                'obiteljska-kuca-babina-greda': 'projects/obiteljska-kuca-babina-greda.html',
-                'falkensteiner-resort': 'projects/falkensteiner-resort.html',
-                'smw-slavonski-brod': 'projects/smw-slavonski-brod.html'
-            };
-
-            if (projectUrls[projectId]) {
-                window.location.href = projectUrls[projectId];
-            } else {
-                alert(`Detalji za projekt "${projectId}" će biti dostupni uskoro!`);
-            }
-        }
-
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-
-        const form = document.querySelector(".contact-form");
-        const statusMessage = document.getElementById("form-status");
-
-        async function handleFormSubmit(e) {
-            e.preventDefault();
-
-            statusMessage.style.display = "none";
-            const submitBtn = form.querySelector(".submit-btn");
-            submitBtn.disabled = true;
-            submitBtn.textContent = "Slanje...";
-
-            const formData = new FormData(form);
-
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (response.ok) {
-                    statusMessage.textContent = "✅ Poruka je uspješno poslana!";
-                    statusMessage.className = "success";
-                    statusMessage.style.display = "block";
-                    form.reset();
-                } else {
-                    statusMessage.textContent = "❌ Došlo je do greške. Pokušajte ponovo.";
-                    statusMessage.className = "error";
-                    statusMessage.style.display = "block";
-                }
-            } catch (error) {
-                statusMessage.textContent = "⚠️ Greška s mrežom. Pokušajte kasnije.";
-                statusMessage.className = "error";
-                statusMessage.style.display = "block";
-            }
-
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Pošalji";
-        }
-
-        form.addEventListener("submit", handleFormSubmit);
-        document.addEventListener("DOMContentLoaded", function () {
-            const cards = document.querySelectorAll(".service-card");
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target); // animacija se radi samo jednom
-                    }
-                });
-            }, { threshold: 0.3 }); // kartica postaje vidljiva kada je 20% vidljivo
-
-            cards.forEach(card => observer.observe(card));
-        });
-    </script>
 </body>
 
 </html>

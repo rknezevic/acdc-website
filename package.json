@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js"
+  },
   "dependencies": {
     "@vercel/analytics": "^1.5.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0"
   }
 }
