@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ac-dc-elektroinstalacije/sitemap.xml
+Sitemap: https://www.ac-dc-elektroinstalacije.hr/sitemap.xml
